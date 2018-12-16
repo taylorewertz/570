@@ -1,0 +1,25 @@
+I wrote this code myself with help of the sources in the references section.
+The program doesn't meet some of the specifications of this project.
+
+* piping after a << hereis command doesn't work, the program returns a Invalid NULL. I believe this is because the pipearray is math is different to calculate where the pipe is located.
+* If the command echo hi> | puts the invalid null command error message into a file name |. I believe this is happening because the redirection is done before the error message is executed and the echo hi doesnt execute. 
+* On occasion when the multuple piping was happening, it wouldn't wait and the the command wouldnt fully execute. I called wait twice in order to make it wait but it works most times and sometimes it wont.
+* On hereis command without a pipe it works when i test it on with ~cs570/Data4/input53 and get the correct output, but the autograder has a completly different output so i dont get the points.
+
+
+Invidual choices:
+* I used CHK to exit upon failure and produce error messages for me in some cases instead of writing the error message code and exit codes because it was faster.
+
+
+References:
+“Getenv(3) - Linux Manual Page.” sem_wait(3) - Linux Manual Page, man7.org/linux/man-pages/man3/getenv.3.html.
+“Execvp(3) - Linux Man Page.” Pulse-Daemon.conf(5) - Linux Man Page, linux.die.net/man/3/execvp.
+“Fork(2) - Linux Manual Page.” sem_wait(3) - Linux Manual Page, man7.org/linux/man-pages/man2/fork.2.html.
+“Pipe(2) - Linux Man Page.” Pulse-Daemon.conf(5) - Linux Man Page, linux.die.net/man/2/pipe.
+Pulse-Daemon.conf(5) - Linux Man Page, linux.die.net/man/2/access.
+Setenv(3)- Linux Manual Page, man7.org/linux/man-pages/man3/setenv.3.html.
+tutorialspoint.com. “C Library Function - Strtok().” Www.tutorialspoint.com, Tutorials Point, www.tutorialspoint.com/c_standard_library/c_function_strtok.htm.
+tutorialspoint.com. “C Library Function - Strstr().” Www.tutorialspoint.com, Tutorials Point, www.tutorialspoint.com/c_standard_library/c_function_strstr.htm.
+Getline(3) - Linux Manual Page, man7.org/linux/man-pages/man3/getline.3.html.Getcwd(3) - Linux Manual Page, man7.org/linux/man-pages/man2/getcwd.2.html.
+Fopen(3) - Linux Manual Page, man7.org/linux/man-pages/man3/fopen.3.html.
+My Spring 2018 p2 printout
