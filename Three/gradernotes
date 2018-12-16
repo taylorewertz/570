@@ -1,0 +1,9 @@
+I believe everything works perfectly under all conditions.
+I wrote this code myself with the help of the citations below.
+The way I achieved coordination is when in the prolog(), when  a shooter or jogger came in it locked that type of customer, then it incremented a counter for that type then released the lock on the first type. If the counter is greater than zero the other type of customer was locked from entering the critical region. In the epilog() I did basically the opposite I locked the type, decremented the count of that type and if that number is zero allow the opposite type of customer to release the lock on it then release the lock on the original type. This allowed the two types to coordinate without being in the gym at the same time.
+
+
+Works Cited:
+Angrave. “Angrave/SystemProgramming.” GitHub, github.com/angrave/SystemProgramming/wiki/Synchronization,-Part-7:-The-Reader-Writer-Problem.
+sem_wait(3) - Linux Manual Page, man7.org/linux/man-pages/man3/sem_wait.3.html.
+sem_init(3) - Linux Manual Page, man7.org/linux/man-pages/man3/sem_init.3.html.
